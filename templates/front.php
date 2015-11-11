@@ -30,6 +30,7 @@ get_header(); ?>
 </header>
 
 	<div class="row">
+		
 		<?php get_template_part( 'parts/check-if-sidebar-exist' ); ?>
 		<?php do_action( 'foundationpress_before_content' ); ?>
 

@@ -1,0 +1,38 @@
+.media-banner {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @media #{$small-only}{
+    min-height: 100vh;
+  }
+
+  @include element(video) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+    @media #{$small-only}{
+      min-height: 125vh;
+    }
+    @media #{$medium-up}{
+      min-width: 110vw;
+    }
+  }
+
+  .introduction {
+    display: block;
+    @media #{$small-only} and (orientation: portrait){
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    @media #{$medium-up} {
+      padding: 5vh 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.introduction {
+  $color: white;
+  color: $color;
+  width: 100%;
+  display: block;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  @include element(introducing){
+    @include greeting-line($satisfy, 10, 0, 0);
+  }
+  @include element(the){
+    @include greeting-line($satisfy, 5, -4, -10);
+  }
+  @include element(bugsports){
+    @include greeting-line($amatic-sc, 23, 0, 0);
+  }
+  @include element(homegrown){
+    @include greeting-line($satisfy, 10, -9, -6);
+  }
+  @include element(kiwi){
+    @include greeting-line($amatic-sc, 13.5, 0, 0);
+  }
+  @include element(bar){
+    @include decorative-horizontal-bar(18, 1px, 0.25em, $color);
+  }
+}

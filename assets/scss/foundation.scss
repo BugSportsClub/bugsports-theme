@@ -64,9 +64,13 @@
   Add your scss files below to structure your project styles
 */
 
+@import "site/utilities";
 @import "site/global";
 @import "site/wp-admin";
 @import "site/topbar";
 @import "site/front";
 @import "site/featured";
 @import "site/footer";
+@import "site/introduction";
+@import "site/media-banner";
+@import "site/foo";

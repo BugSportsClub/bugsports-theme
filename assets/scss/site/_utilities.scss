@@ -1,0 +1,59 @@
+@mixin element($element){
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier){
+  &--#{$modifier}{
+    @content;
+  }
+}
+
+@function scale-vw ($value, $scale:1){
+  @return ($value * $scale) + vw;
+}
+
+@mixin scaled-greeting-line($font-size, $margin-top, $margin-bottom, $scale:$greeting-scale-default){
+  font-size: scale-vw($font-size, $scale);
+  @if $margin-top != 0 and $margin-bottom != 0 {
+    margin-top: scale-vw($margin-top, $scale);
+    margin-bottom: scale-vw($margin-bottom, $scale);
+  }
+}
+
+@mixin greeting-line($font-family, $font-size, $margin-top, $margin-bottom){
+  display: block;
+  text-align: center;
+  font-family: $font-family;
+  @include scaled-greeting-line($font-size, $margin-top, $margin-bottom);
+  @media screen and (min-width: $small-breakpoint){
+    @include scaled-greeting-line($font-size, $margin-top, $margin-bottom, $greeting-scale-small-up);
+  }
+  @media screen and (min-width: $medium-breakpoint){
+    @include scaled-greeting-line($font-size, $margin-top, $margin-bottom, $greeting-scale-medium-up);
+  }
+  @media screen and (min-width: $large-breakpoint){
+    @include scaled-greeting-line($font-size, $margin-top, $margin-bottom, $greeting-scale-large-up);
+  }
+}
+
+@mixin decorative-horizontal-bar($width, $height, $bottom, $background){
+
+  display: inline-block;
+  background: $background;
+  bottom: $bottom;
+  height: $height;
+  position: relative;
+
+  width: scale-vw($width, $greeting-scale-default);
+  @media screen and (min-width: $small-breakpoint){
+    width: scale-vw($width, $greeting-scale-small-up);
+  }
+  @media screen and (min-width: $medium-breakpoint){
+    width: scale-vw($width, $greeting-scale-medium-up);
+  }
+  @media screen and (min-width: $large-breakpoint){
+    width: scale-vw($width, $greeting-scale-large-up);
+  }
+}

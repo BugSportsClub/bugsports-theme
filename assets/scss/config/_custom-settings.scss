@@ -51,7 +51,7 @@ $header-font-weight: 300;
 $header-text-rendering: optimizeLegibility;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-weight: bold;
+// $topbar-link-weight: bold;
 $topbar-link-color: $white;
 $topbar-link-color-hover: $white;
 $topbar-link-color-active: $white;
@@ -66,6 +66,19 @@ $topbar-link-bg-active-hover: scale-color($jet, $lightness: -14%);
 // Media query breakpoints
 $small-breakpoint:  em-calc(640);
 $medium-breakpoint: em-calc(1024);
-$topbar-breakpoint: em-calc(820);
 $large-breakpoint:  em-calc(1440);
 $xlarge-breakpoint: em-calc(1920);
+$topbar-breakpoint: em-calc(820);
+
+// NON FOUNDATIONAL SETTINGS
+$greeting-scale-default    : 1.00 ;
+$greeting-scale-small-up   : 0.66 ;
+$greeting-scale-medium-up  : 0.50 ;
+$greeting-scale-large-up   : 0.33 ;
+
+$amatic-sc      : 'Amatic SC', cursive;
+$open-sans      : 'Open Sans', sans-serif;
+$satisfy        : 'Satisfy', cursive;
+
+$font-family--primary   : $open-sans;
+$font-family--secondary : $font-family--primary;
