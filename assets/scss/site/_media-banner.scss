@@ -35,4 +35,24 @@
       padding: 5vh 0;
     }
   }
+
+  .discover {
+    @extend .show-for-small-only;
+
+    display: none;
+
+    @media #{$small-only} and (orientation: portrait){
+      display: block;
+      position: absolute;
+      top: 66%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 100%;
+      text-align: center;
+      text-decoration: underline;
+      font-family: $amatic-sc;
+      color: white;
+      font-size: 10vw;
+    }
+  }
 }
