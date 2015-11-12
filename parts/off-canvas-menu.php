@@ -16,7 +16,7 @@
   <section class="middle tab-bar-section">
 
     <h1 class="title">
-      <?php bloginfo( 'name' ); ?>
+      <?php //bloginfo( 'name' ); ?>
     </h1>
 
   </section>
