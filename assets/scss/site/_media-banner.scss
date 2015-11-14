@@ -38,21 +38,37 @@
 
   .discover {
     @extend .show-for-small-only;
-
     display: none;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-family: $amatic-sc;
+    color: white;
+    font-size: 10vw;
 
-    @media #{$small-only} and (orientation: portrait){
-      display: block;
+    &:before {
+      content: "";
       position: absolute;
-      top: 66%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      width: 100%;
-      text-align: center;
-      text-decoration: underline;
-      font-family: $amatic-sc;
-      color: white;
-      font-size: 10vw;
+      width: 50%;
+      height:2px;
+      bottom: 0;
+      left: 25%;
+      background-color: #FFF;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    &:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
     }
   }
 }
