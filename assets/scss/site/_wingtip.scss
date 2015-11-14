@@ -1,0 +1,59 @@
+.clear {
+  &:before, &:after {
+    content: " ";
+    display: table;
+    float: none;
+    clear: both;
+  }
+}
+
+@mixin create-wing(){
+  @media #{$large-up}{
+    width: 50%;
+    float: left;
+  }
+}
+
+.wing {
+  @extend .clear;
+  &-left {
+    text-align: right;
+    @include create-wing();
+  }
+  &-right {
+    text-align: left;
+    @include create-wing();
+  }
+
+  @include element(content){
+    @media #{$large-up}{
+      width: 75%;
+      float: left;
+    }
+  }
+  @include element(heading){
+    @media #{$medium-up}{
+      text-align: inherit;
+    } 
+  }
+  @include element(description){
+    @media #{$medium-up}{
+      text-align: inherit;
+      font-size: 1.5em;
+    }
+    @media #{$large-up}{
+
+    }
+  }
+  @include element(bubble){
+    @media #{$large-up}{
+      width: 25%;
+      height: 100px;
+      background: green;
+      float: left;
+    }
+  }
+  @include element(media){
+
+  }
+}
