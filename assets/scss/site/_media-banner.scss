@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  margin-top: rem-calc(-32);
 
   @media #{$small-only}{
     min-height: 100vh;

@@ -23,28 +23,19 @@
     <a class="discover">Discover More Below</a>
   </div>
 
-<div class="clear" style="padding: 15px 0px">
-  <div class="large-5 medium-6 column text-right">
-    <h1>BugPolo</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud ut aliquip ex ea commodo
-consequat.</p>
-    <a class="button">Find Out More</a>
-  </div>
+  <div class="row" style="padding: 15px 0px">
+    <div class="medium-6 column text-right">
+      <h1>BugPolo</h1>
+      <p style="font-size: 1.25em;">Derived from water polo and evolved around the River Bug, BugPolo is a homegrown pool sport everyone can enjoy.</p>
+      <a class="button" href="bugpolo">Get on the pool</a>
+    </div>
 
-  <div class="large-5 medium-6 large-push-2 column">
-    <h1>River Bugging</h1>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <a class="button">Find Out More</a>
+    <div class="medium-6 column">
+      <h1>River Bugging</h1>
+      <p style="font-size: 1.25em;">From breathtaking scenery to thrilling rapids, River Bugging is the perfect way to experience New Zealand rivers.</p>
+      <a class="button" href="river-bugging">Get on the river</a>
+    </div>
   </div>
-
-  <div class="show-for-large-up large-2 large-pull-5 column">
-    <div style="width: 100%; height: 200px; background: red;"></div>
-  </div>
-</div>
 
 <?php get_footer();?>
 
