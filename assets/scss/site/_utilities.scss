@@ -28,6 +28,7 @@
   font-family: $font-family;
   @include scaled-greeting-line($font-size, $margin-top, $margin-bottom);
   @media screen and (min-width: $small-breakpoint){
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
     @include scaled-greeting-line($font-size, $margin-top, $margin-bottom, $greeting-scale-small-up);
   }
   @media screen and (min-width: $medium-breakpoint){
