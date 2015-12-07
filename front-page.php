@@ -1,7 +1,7 @@
 <?php get_header();?>
   
   <div class="media-banner">
-    <video class="media-banner__video" autoplay loop>
+    <video class="media-banner__video" poster="<?php echo get_template_directory_uri();?>/assets/images/bg-home.jpg" autoplay loop>
       <source src="<?php echo get_template_directory_uri();?>/assets/images/bg-home.m4v" type="video/mp4">
       <source src="<?php echo get_template_directory_uri();?>/assets/images/bg-home.mp4" type="video/mp4">
       <source src="<?php echo get_template_directory_uri();?>/assets/images/bg-home.ogg" type="video/ogg">
