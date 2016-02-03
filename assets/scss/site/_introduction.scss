@@ -1,26 +1,48 @@
 .introduction {
-  $color: white;
-  color: $color;
-  width: 100%;
+  color: white;
   display: block;
   text-align: center;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
+
+  font-size: 8vw;
+
+  @media screen and (min-width: $small-breakpoint){
+    font-size: 3vw;
+  }
+
   @include element(introducing){
-    @include greeting-line($satisfy, 10, 0, 0);
+    font-family: $satisfy;
+    display: block;
   }
   @include element(the){
-    @include greeting-line($satisfy, 5, -4, -10);
+    font-family: $satisfy;
+    display: block;
+    font-size: 0.5em;
+    margin: -0.5em 0;
   }
   @include element(bugsports){
-    @include greeting-line($amatic-sc, 23, 0, 0);
+    font-family: $amatic-sc;
+    display: block;
+    font-size: 3em;
+    margin: -0.4em 0 -0.35em;
   }
   @include element(homegrown){
-    @include greeting-line($satisfy, 10, -9, -6);
+    font-family: $satisfy;
+    display: block;
   }
   @include element(kiwi){
-    @include greeting-line($amatic-sc, 13.5, 0, 0);
+    font-family: $amatic-sc;
+    display: block;
+    font-size: 1.7271em;
+    margin-top: -0.4em;
   }
   @include element(bar){
-    @include decorative-horizontal-bar(18, 1px, 0.25em, $color);
+    display: inline-block;
+    position: relative;
+    bottom: 0.25em;
+    height: 2px;
+    width: 3.25em;
+    background: white;
   }
 }

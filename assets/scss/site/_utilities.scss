@@ -14,15 +14,15 @@
   @return ($value * $scale) + vw;
 }
 
-@mixin scaled-greeting-line($font-size, $margin-top, $margin-bottom, $scale:$greeting-scale-default){
+/*@mixin scaled-greeting-line($font-size, $margin-top, $margin-bottom, $scale:$greeting-scale-default){
   font-size: scale-vw($font-size, $scale);
   @if $margin-top != 0 and $margin-bottom != 0 {
     margin-top: scale-vw($margin-top, $scale);
     margin-bottom: scale-vw($margin-bottom, $scale);
   }
-}
+}*/
 
-@mixin greeting-line($font-family, $font-size, $margin-top, $margin-bottom){
+/*@mixin greeting-line($font-family, $font-size, $margin-top, $margin-bottom){
   display: block;
   text-align: center;
   font-family: $font-family;
@@ -37,7 +37,7 @@
   @media screen and (min-width: $large-breakpoint){
     @include scaled-greeting-line($font-size, $margin-top, $margin-bottom, $greeting-scale-large-up);
   }
-}
+}*/
 
 @mixin decorative-horizontal-bar($width, $height, $bottom, $background){
 
