@@ -10,9 +10,9 @@
   }
 }
 
-@function scale-vw ($value, $scale:1){
+/*@function scale-vw ($value, $scale:1){
   @return ($value * $scale) + vw;
-}
+}*/
 
 /*@mixin scaled-greeting-line($font-size, $margin-top, $margin-bottom, $scale:$greeting-scale-default){
   font-size: scale-vw($font-size, $scale);
@@ -39,7 +39,7 @@
   }
 }*/
 
-@mixin decorative-horizontal-bar($width, $height, $bottom, $background){
+/*@mixin decorative-horizontal-bar($width, $height, $bottom, $background){
 
   display: inline-block;
   background: $background;
@@ -57,4 +57,4 @@
   @media screen and (min-width: $large-breakpoint){
     width: scale-vw($width, $greeting-scale-large-up);
   }
-}
+}*/

@@ -46,3 +46,13 @@
 @media only screen and (max-width: $topbar-breakpoint) {
   body.offcanvas .top-bar { display: none; }
 }
+
+.top-bar-container {
+	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.top-bar .title-area {
+	h1 {
+		font-family: $amatic-sc;
+	}
+}

@@ -33,6 +33,8 @@ $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
 
+$row-width: rem-calc(1200);
+
 // We use these as default colors throughout
 $primary-color: #008CBA;
 $secondary-color: #e7e7e7;
@@ -50,12 +52,20 @@ $body-font-style: normal;
 $header-font-weight: 300;
 $header-text-rendering: optimizeLegibility;
 
+$topbar-bg-color: $white;
+$topbar-height: rem-calc(75);
+
+
+$topbar-title-font-size: rem-calc(20);
+
 // Set the link colors and styles for top-level nav
 // $topbar-link-weight: bold;
-$topbar-link-color: $white;
+$topbar-link-color: $black;
 $topbar-link-color-hover: $white;
 $topbar-link-color-active: $white;
 $topbar-link-color-active-hover: $white;
+
+$topbar-link-font-size: rem-calc(25);
 
 //$topbar-link-bg: $topbar-bg;
 $topbar-link-bg-hover: $jet;
@@ -70,12 +80,6 @@ $large-breakpoint:  em-calc(1440);
 $xlarge-breakpoint: em-calc(1920);
 $topbar-breakpoint: em-calc(820);
 
-// NON FOUNDATIONAL SETTINGS
-$greeting-scale-default    : 1.00 ;
-$greeting-scale-small-up   : 0.66 ;
-$greeting-scale-medium-up  : 0.50 ;
-$greeting-scale-large-up   : 0.40 ;
-
 $amatic-sc      : 'Amatic SC', cursive;
 $open-sans      : 'Open Sans', sans-serif;
 $satisfy        : 'Satisfy', cursive;
@@ -83,4 +87,5 @@ $satisfy        : 'Satisfy', cursive;
 $font-family--primary   : $open-sans;
 $font-family--secondary : $font-family--primary;
 
-$topbar-dropdown-label-font-size: rem-calc(15);
+$topbar-title-font-size: rem-calc(45);
+$topbar-link-font-family: $amatic-sc;
