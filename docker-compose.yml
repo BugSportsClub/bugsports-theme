@@ -20,7 +20,7 @@ services:
        - "80:80"
      restart: always
      volumes:
-       - /home/ubuntu/WordPress/bugsports-theme:/var/www/html/wp-content/themes/bugsports-theme
+       - /Users/simon/Development/bugsports-theme:/var/www/html/wp-content/themes/bugsports-theme
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
