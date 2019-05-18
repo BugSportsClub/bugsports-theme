@@ -5,14 +5,14 @@
   width: 100%;
   margin-top: rem-calc(-32);
 
-  @media #{$small-only}{
+  /*@media #{$small-only}{
     min-height: 100vh;
-  }
+  }*/
 
   @media #{$medium-up}{
     min-height: 100%;
-    height: 66vh;
-    box-shadow: inset 0 0 15px #000;
+    // height: 66vh;
+    //box-shadow: inset 0 0 15px #000;
   }
 
   @include element(video) {
@@ -43,14 +43,14 @@
   }
 
   .introduction {
-    
+
     display: block;
     position: absolute;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 
     @media #{$small-only} and (orientation: portrait){
-      top: 25%;    
+      top: 25%;
     }
     @media #{$medium-up} {
       top: 50%;

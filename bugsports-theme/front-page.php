@@ -1,13 +1,17 @@
 <?php get_header();?>
 
   <div class="media-banner">
+<!--
     <video class="media-banner__video" poster="<?php echo get_template_directory_uri();?>/assets/images/bg-home.jpg" autoplay loop>
       <source src="<?php echo get_template_directory_uri();?>/assets/images/bg-home.m4v" type="video/mp4">
       <source src="<?php echo get_template_directory_uri();?>/assets/images/bg-home.mp4" type="video/mp4">
       <source src="<?php echo get_template_directory_uri();?>/assets/images/bg-home.ogg" type="video/ogg">
       <source src="<?php echo get_template_directory_uri();?>/assets/images/bg-home.webm" type="video/webm">
     </video>
+-->
+    <img src="<?php echo get_template_directory_uri();?>/assets/images/banner.jpg">
 
+<!--
     <div class="introduction">
       <span class="introduction__introducing">introducing</span>
       <span class="introduction__the">the</span>
@@ -19,6 +23,7 @@
       </span>
       <span class="introduction__kiwi">New Zealand Water Sports</span>
     </div>
+-->
 
   </div>
 
@@ -45,7 +50,7 @@
   <div class="parallax action"></div>
 
   <div class="parallax adventure"></div>
-  
+
   <div style="float: none; clear: both;"></div>
 
 <?php get_footer();?>
