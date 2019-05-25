@@ -2,6 +2,8 @@ The actual theme is located in the bugsports-theme sub directory of the bugsport
 
 Please see the README.md in the bugsports-theme subfolder for more information.
 
+[![Build Status](https://travis-ci.com/iokiwi/bugsports-theme.svg?branch=master)](https://travis-ci.com/iokiwi/bugsports-theme)
+
 ## Building the theme 
 
 1. Install prequisites
