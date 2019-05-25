@@ -4,13 +4,16 @@ Please see the README.md in the bugsports-theme subfolder for more information.
 
 ## Building the theme 
 
-1. Clone the repo 
+1. Install prequisites
+```bash
+npm install -g bower grunt
 ```
-cd bugsports-theme/bugsports theme
+2. Clone the repo 
+3. `cd` into the theme folder
+```bash
+cd bugsports-theme/bugsports-theme
 ```
-
 3. Install dependencies
-
 ```bash
 npm install
 ```
