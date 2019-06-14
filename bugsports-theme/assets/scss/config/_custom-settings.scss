@@ -3,16 +3,54 @@
 	This file will only contain uncommented settings that are actually used in the theme.
 */
 
-// We use these to define default font stacks
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$small-breakpoint:  em-calc(640);
+$medium-breakpoint: em-calc(1024);
+$large-breakpoint:  em-calc(1440);
+$xlarge-breakpoint: em-calc(1920);
+$topbar-breakpoint: $small-breakpoint;
 
-// We use these to define default font weights
-$font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
+$small-range:   (0, $small-breakpoint);
+$medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
+$large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
+$xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
+$xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));
 
-// Foundation color naming conventions
+
+// $screen: "only screen";
+
+// $landscape: "#{$screen} and (orientation: landscape)";
+// $portrait: "#{$screen} and (orientation: portrait)";
+
+// $small-up: $screen;
+// $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+// $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+// $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+// $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+// $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+// $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+// $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+// $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+// $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// $retina: (
+//  "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+//  "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+//  "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+//  "#{$screen} and (min-device-pixel-ratio: 2)",
+//  "#{$screen} and (min-resolution: 192dpi)",
+//  "#{$screen} and (min-resolution: 2dppx)"
+// );
+
+// Legacy
+// $small: $medium-up;
+// $medium: $medium-up;
+// $large: $large-up;
+
+
 $white       : #FFFFFF;
 $ghost       : #FAFAFA;
 $snow        : #F9F9F9;
@@ -33,7 +71,27 @@ $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
 
-$row-width: rem-calc(1200);
+$amatic-sc      : 'Amatic SC', cursive;
+$open-sans      : 'Open Sans', sans-serif;
+$satisfy        : 'Satisfy', cursive;
+$lobster-two 	: 'Lobster Two', cursive;
+$source-sans-pro: 'Source Sans Pro', sans-serif;
+
+// We use these to define default font stacks
+$font-family-sans-serif: $source-sans-pro; //"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+// We use these to define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$row-width: rem-calc(960);
+
+$bsc-purple: #5C3365;
+$bsc-orange: #F3B000;
+$bsc-orange: rgb(255, 153, 46);
+$bsc-blue:   #2F9CCC;
 
 // We use these as default colors throughout
 $primary-color: #008CBA;
@@ -42,6 +100,10 @@ $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
+
+
+$font-family--primary   : $source-sans-pro;
+$font-family--secondary : $font-family--primary;
 
 // We use these to control various global styles
 $body-bg: $white;
@@ -55,37 +117,98 @@ $header-text-rendering: optimizeLegibility;
 $topbar-bg-color: $white;
 $topbar-height: rem-calc(75);
 
+$topbar-title-font-size: rem-calc(45);
 
-$topbar-title-font-size: rem-calc(20);
-
-// Set the link colors and styles for top-level nav
-// $topbar-link-weight: bold;
-$topbar-link-color: $black;
+$topbar-link-color: $charcoal;
 $topbar-link-color-hover: $white;
 $topbar-link-color-active: $white;
 $topbar-link-color-active-hover: $white;
+$topbar-link-font-size: rem-calc(18);
 
-$topbar-link-font-size: rem-calc(25);
+$topbar-link-bg-hover: $bsc-blue;
+$topbar-link-bg-color-hover: $bsc-orange;
+$topbar-link-bg-active: $bsc-blue;
+$topbar-link-bg-active-hover: scale-color($topbar-link-bg-color-hover, $lightness: -14%);
+$topbar-link-font-family: $source-sans-pro;
 
-//$topbar-link-bg: $topbar-bg;
-$topbar-link-bg-hover: $jet;
-$topbar-link-bg-color-hover: $jet;
-$topbar-link-bg-active: $jet;
-$topbar-link-bg-active-hover: scale-color($jet, $lightness: -14%);
+$topbar-dropdown-bg: $bsc-orange;
+$topbar-dropdown-link-bg: $white;
+$topbar-dropdown-link-color: $oil;
 
-// Media query breakpoints
-$small-breakpoint:  em-calc(640);
-$medium-breakpoint: em-calc(1024);
-$large-breakpoint:  em-calc(1440);
-$xlarge-breakpoint: em-calc(1920);
-$topbar-breakpoint: em-calc(820);
+$topbar-dropdown-link-bg-hover: $bsc-orange;
+$topbar-dropdown-link-color-hover: $white;
 
-$amatic-sc      : 'Amatic SC', cursive;
-$open-sans      : 'Open Sans', sans-serif;
-$satisfy        : 'Satisfy', cursive;
+// 18. Off-canvas
+// - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$font-family--primary   : $open-sans;
-$font-family--secondary : $font-family--primary;
+// Off Canvas Tab Bar Variables
+$include-html-off-canvas-classes: $include-html-classes;
 
-$topbar-title-font-size: rem-calc(45);
-$topbar-link-font-family: $amatic-sc;
+$tabbar-bg: $white;
+// $tabbar-height: rem-calc(45);
+// $tabbar-icon-width: $tabbar-height;
+// $tabbar-line-height: $tabbar-height;
+// $tabbar-color: $white;
+// $tabbar-middle-padding: 0 rem-calc(10);
+
+// Off Canvas Divider Styles
+// $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
+// $tabbar-right-section-border: $tabbar-left-section-border;
+
+
+// Off Canvas Tab Bar Headers
+// $tabbar-header-color: $white;
+// $tabbar-header-weight: $font-weight-bold;
+// $tabbar-header-line-height: $tabbar-height;
+// $tabbar-header-margin: 0;
+
+// Off Canvas Menu Variables
+// $off-canvas-width: rem-calc(250);
+$off-canvas-bg: $white;
+$off-canvas-bg-hover: $bsc-orange;
+$off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
+
+// Off Canvas Menu List Variables
+// $off-canvas-label-padding: .3rem rem-calc(15);
+$off-canvas-label-color: $bsc-orange;
+// $off-canvas-label-text-transform: uppercase;
+// $off-canvas-label-font-size: rem-calc(12);
+// $off-canvas-label-font-weight: $font-weight-bold;
+// $off-canvas-label-bg: $tuatara;
+// $off-canvas-label-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+// $off-canvas-label-border-bottom: none;
+// $off-canvas-label-margin:0;
+// $off-canvas-link-padding: rem-calc(10, 15);
+$off-canvas-link-color: $oil;
+// $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
+$off-canvas-back-bg: $white;
+// $off-canvas-back-border-top: $off-canvas-label-border-top;
+// $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
+$off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
+// $off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+// $off-canvas-back-hover-border-bottom: none;
+
+// Off Canvas Menu Icon Variables
+$tabbar-menu-icon-color: $bsc-blue;
+$tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
+
+// $tabbar-menu-icon-text-indent: rem-calc(35);
+// $tabbar-menu-icon-width: $tabbar-icon-width;
+// $tabbar-menu-icon-height: $tabbar-height;
+// $tabbar-menu-icon-padding: 0;
+
+// $tabbar-hamburger-icon-width: rem-calc(16);
+// $tabbar-hamburger-icon-left: false;
+// $tabbar-hamburger-icon-top: false;
+// $tabbar-hamburger-icon-thickness: 1px;
+// $tabbar-hamburger-icon-gap: 6px;
+
+// Off Canvas Back-Link Overlay
+// $off-canvas-overlay-transition: background 300ms ease;
+// $off-canvas-overlay-cursor: pointer;
+// $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, .5), 4px 0 4px rgba($black, .5);
+// $off-canvas-overlay-background: rgba($white, .2);
+// $off-canvas-overlay-background-hover: rgba($white, .05);
+
+// Transition Variables
+// $menu-slide: "transform 500ms ease";

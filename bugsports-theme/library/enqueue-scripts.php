@@ -13,7 +13,9 @@
 if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts() {
 
-	wp_enqueue_style('fonts_google','https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400,700,300,400italic|Amatic+SC:400,700|Satisfy',false);
+	//wp_enqueue_style('fonts_google','https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:400,700,300,400italic|Amatic+SC:400,700|Satisfy',false);
+
+	wp_enqueue_style('fonts_google2','https://fonts.googleapis.com/css?family==Pacifico|Open+Sans:400,700,300,400italic|Amatic+SC:400,700|Satisfy|Lobster+Two|Source+Sans+Pro&display=swap',false);
 
 	// Enqueue the main Stylesheet.
 	wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/assets/stylesheets/foundation.css' );
