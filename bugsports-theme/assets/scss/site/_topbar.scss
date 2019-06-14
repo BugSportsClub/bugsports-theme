@@ -4,7 +4,7 @@
 	@media only screen and (max-width: ($topbar-breakpoint)) {
 		.top-bar-left {
 			li.name {
-				padding-left: rem-calc(50);
+				padding-left: rem-calc(10);
 			}
 
 			li.toggle-topbar a, li.menu-icon {
@@ -55,4 +55,8 @@
 	h1 {
 		font-family: $lobster-two;
 	}
+}
+
+.top-bar .title-area h1 a {
+	padding-left: 0px;
 }
