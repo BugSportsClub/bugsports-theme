@@ -7,7 +7,7 @@ get_header(); ?>
 <?php get_template_part( 'parts/featured-image' ); ?>
 
 <div class="row">
-
+    <div class="small-12 columns">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php comments_template(); ?>
 		</article>
 	<?php endwhile; // End the loop ?>
-
+   </div>
 </div>
 
 <?php get_footer(); ?>
