@@ -15,16 +15,16 @@ npm install -g bower grunt
 ```bash
 cd bugsports-theme/bugsports-theme
 ```
-3. Install dependencies
+4. Install dependencies
 ```bash
 npm install
 ```
-4. Build the theme
+5. Build the theme
 ```bash
 npm run build
 ```
 
-5. Package the theme
+6. Package the theme
 ```bash
 npm run package
 ```
@@ -34,18 +34,18 @@ Find the packaged theme in
 bugsports-theme/bugsports-theme/packaged/bugsports-theme_yyyy-mm-dd_HH-MM.zip
 ```
 
-
 # Development environment
 
 1. Install [Docker](https://docs.docker.com/install/)
 2. Install [Docker Compose](https://docs.docker.com/compose/install/)
-3. Start the development environment with `docker compose-up -d`
-4. Accesss your wordpress instance at http://localhost:8000/
-5. Live reload resources with
+3. Build docker image `docker build -t bsc/wordpress .`
+4. Start the development environment with `docker compose-up -d`
+5. Accesss your wordpress instance at http://localhost:8000/
+6. Live reload resources with
+
 ```bash
 npm run watch
 ```
-
 
 Source(s):
  * https://docs.docker.com/compose/wordpress/

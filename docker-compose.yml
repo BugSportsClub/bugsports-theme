@@ -15,14 +15,12 @@ services:
   wordpress:
     depends_on:
       - db
-    image: wordpress:latest
+    image: bsc/wordpress:latest
     ports:
       - "8000:80"
     restart: always
     volumes:
       - ./bugsports-theme:/var/www/html/wp-content/themes/bugsports-theme
-      - ./uploads:/var/www/wp-content/uploads
-      - ./plugins:/var/www/wp-content/plugins
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
