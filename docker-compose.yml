@@ -12,15 +12,16 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
-  wordpress:
+  bsc_wordpress:
+    build:
+        context: .
+        dockerfile: Dockerfile
     depends_on:
       - db
-    image: bsc/wordpress:latest
+    image: bsc_wordpress:latest
     ports:
       - "8000:80"
     restart: always
-    volumes:
-      - ./bugsports-theme:/var/www/html/wp-content/themes/bugsports-theme
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
