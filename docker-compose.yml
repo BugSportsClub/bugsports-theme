@@ -22,6 +22,12 @@ services:
     ports:
       - "8000:80"
     restart: always
+<<<<<<< HEAD
+=======
+    volumes:
+      - ./bugsports-theme:/var/www/html/wp-content/themes/bugsports-theme
+      - wp_content:/var/www/html/wp-content
+>>>>>>> WIP dockerizing
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
@@ -30,3 +36,4 @@ services:
       WORDPRESS_DEBUG: 1
 volumes:
   db_data: {}
+  wp_content: {}

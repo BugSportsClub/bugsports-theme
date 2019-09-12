@@ -39,12 +39,20 @@ bugsports-theme/bugsports-theme/packaged/bugsports-theme_yyyy-mm-dd_HH-MM.zip
 1. Install [Docker](https://docs.docker.com/install/)
 2. Install [Docker Compose](https://docs.docker.com/compose/install/)
 3. Build docker image `docker build -t bsc/wordpress .`
-4. Start the development environment with `docker compose-up -d`
+4. Start the development environment with `docker-compose up -d`
 5. Accesss your wordpress instance at http://localhost:8000/
 6. Live reload resources with
 
 ```bash
 npm run watch
+```
+
+Other commands
+```bash
+docker exec -it bugsports-theme_wordpress_1 bash
+```
+```bash
+docker-compose down --volumes
 ```
 
 Source(s):
