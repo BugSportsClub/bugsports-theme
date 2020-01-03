@@ -9,8 +9,17 @@ stages:
 install:
   - npm install
 
-script: npm run package
+script:
+  - npm run build
+  - npm run package
 
+before_deploy:
+  - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
+  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+  - git config --local user.name $AUTHOR_NAME
+  - git config --local user.email $COMMITTER_EMAIL
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   skip_cleanup: true
@@ -18,4 +27,4 @@ deploy:
     secure: XT2tgZ/gDlrALN6J6T7M6Jl3YjQw1X8MI6HDyJR/vHMAaC3PPlOY4P/XrF2ZvXCS1XN9qaa6dHd3PET1orGlnih/7pqmag51eXd63A6IIM4FLWbhlDTBXYl6kVaRk2uBtgKHHgOuQ3GJRR6znrEY2LqNMY6Qy6Pr0onp5uKU0Q+zutQnigt1i2G/H9FEMAhwDHGluIud2zPNmGajnoGW8liTkn4V215bveTN37WHse64ZlE/stdY1RrVok+ptO9xwmjU5ZGoX6hP6jBHSyWPxquRyQpYCPHBigekYI7BcGcX12ZJrCFpOGgB5uGSb9mP+oN0suy5TvcolOUi/EAxCgEZ3C0aVnAYhaHMYFXJ7W0j2QZn8+uVSSwSNYzfUaoAY0FcMRjV8d0zielxfHG7vSaEimNRN8JhiNFgudfJaRLTQCr470dZUzkj1Fw4t/yjEvQjDkewlETddnHPp/F17RoKWnMJ5DMTZDogzrIah+lG5Zzs82xF3gUZcYoZ+j8hpX3wYIrmaDTQVPeQ3Ds3274kIeMnCtDbteprko0XITMztWc8FmeSC4Hal0xBM9NBLoVeRhqd4Xnp0Hbv/xfCTY8yGhYrRzsVeJYF+fet15Ui82Xl+JCgckuvp/VnKJSrvxCTpG9/dYF9W87OOjpyttAhK+3qFg2znyZYrbSpFLs=
   file: packaged/*.zip
   on:
-    repo: BugSportsClub/bugsports-theme
+    tags: true
