@@ -3,4 +3,11 @@ node_js:
  - 12
 install:
   - npm install
-script: npm pack
+script: npm run package
+# deploy:
+#   provider: releases
+#   api_key: "GITHUB OAUTH TOKEN"
+#   file: packaged/bugsports_theme_*.zip
+#   skip_cleanup: true
+#   on:
+#     tags: true
