@@ -1,6 +1,8 @@
+
 module.exports = function (grunt) {
 	// time
 	require('time-grunt')(grunt);
+	const sass = require('node-sass');
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -41,6 +43,7 @@ module.exports = function (grunt) {
 
 			dist: {
 				options: {
+					implementation: sass,
 					outputStyle: 'compressed'
 				},
 				files: {
